@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSRL Assessment - Digital Sustainability Readiness Level</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page">
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="hero-title">Digital Sustainability Readiness Level (DSRL) Assessment</h1>
+                <p class="hero-description">
+                    Evaluate your organization's maturity in integrating digital technologies with sustainability initiatives. 
+                    This comprehensive assessment measures readiness across 7 key domains to provide actionable insights 
+                    for your digital sustainability journey.
+                </p>
+                <div class="hero-features">
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--color-bg-3);">🌱</div>
+                            <h3>Environmental Impact</h3>
+                            <p>Assess your digital carbon footprint and resource efficiency</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--color-bg-1);">🏗️</div>
+                            <h3>Green Infrastructure</h3>
+                            <p>Evaluate sustainable IT infrastructure and energy usage</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--color-bg-5);">📊</div>
+                            <h3>Data Analytics</h3>
+                            <p>Measure data-driven sustainability decision making</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--color-bg-6);">💡</div>
+                            <h3>Business Innovation</h3>
+                            <p>Assess sustainable business model development</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="start-assessment-btn" class="btn btn--primary btn--lg">Start Assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assessment Page -->
+    <div id="assessment-page" class="page hidden">
+        <div class="container">
+            <div class="assessment-header">
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span id="current-domain">Domain 1 of 7</span>
+                        <span id="progress-percentage">14%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <button id="exit-assessment" class="btn btn--outline btn--sm">Exit Assessment</button>
+            </div>
+
+            <div class="assessment-content">
+                <div class="domain-header">
+                    <div id="domain-badge" class="domain-badge"></div>
+                    <div class="domain-info">
+                        <h2 id="domain-name">Domain Name</h2>
+                        <p id="domain-description">Domain description</p>
+                    </div>
+                </div>
+
+                <div class="question-section">
+                    <h3 id="question-text">Question text</h3>
+                    <div id="question-options" class="question-options"></div>
+                </div>
+
+                <div class="assessment-navigation">
+                    <button id="prev-btn" class="btn btn--outline">Previous</button>
+                    <button id="next-btn" class="btn btn--primary" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" class="page hidden">
+        <div class="container">
+            <div class="results-header">
+                <h1>Your DSRL Assessment Results</h1>
+                <div class="overall-score">
+                    <div class="score-circle">
+                        <span id="overall-score" class="score-number">0</span>
+                        <span class="score-label">Overall DSRL</span>
+                    </div>
+                    <div class="score-description">
+                        <h3 id="score-level-name">Level Name</h3>
+                        <p id="score-level-description">Level description</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-content">
+                <div class="charts-section">
+                    <div class="radar-chart-container">
+                        <h3>Domain Performance Overview</h3>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="radar-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="thermometer-section">
+                        <h3>Individual Domain Scores</h3>
+                        <div id="thermometers-container" class="thermometers-grid"></div>
+                    </div>
+                </div>
+
+                <div class="recommendations-section">
+                    <h3>Recommendations</h3>
+                    <div id="recommendations-content" class="recommendations-content"></div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="export-pdf-btn" class="btn btn--primary">Export PDF Report</button>
+                    <button id="share-results-btn" class="btn btn--outline">Share Results</button>
+                    <button id="retake-assessment-btn" class="btn btn--secondary">Retake Assessment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Share -->
+    <div id="share-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Share Your Results</h3>
+                <button id="close-share-modal" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Share your DSRL assessment results:</p>
+                <div class="share-options">
+                    <button class="share-btn" data-platform="email">📧 Email</button>
+                    <button class="share-btn" data-platform="linkedin">💼 LinkedIn</button>
+                    <button class="share-btn" data-platform="copy">📋 Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
