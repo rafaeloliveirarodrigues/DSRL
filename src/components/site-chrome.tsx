@@ -31,7 +31,7 @@ export function SiteFooter() {
           {" "}·{" "}
           <a href="mailto:ror@digisustainability.io" className="underline hover:text-foreground">ror@digisustainability.io</a>
         </p>
-        <p>Produced with love at Impact Hub Zurich · A flagship project of digisustainability.io</p>
+        <p>{' Developed with love at Impact Hub Zürich                · A flagship project of digisustainability.io'}</p>
       </div>
     </footer>
   );
